@@ -19,7 +19,7 @@
             <h1 class="text-5xl font-semibold mb-6">Gerador de currículos</h1>
 
             <main>
-                <form action="/" method="POST" class="flex w-100 gap-x-12">
+                <form action="pages/index.php" method="POST" class="flex w-100 gap-x-12">
                     <div class="col-pessoais w-100">
                         <h2 class="text-xl mb-6 bg-gray-400 p-3 rounded">Detalhes e experiências profissionais</h2>
 
@@ -51,7 +51,7 @@
                                 </div>
 
                                 <div class="">
-                                    <button class="mt-3 btn btn-primary bg-indigo-500" name="btnCadastrar" type="button">Gerar Currículo</button>
+                                    <button class="mt-3 btn btn-primary bg-indigo-500" name="btnCadastrar" type="submit">Gerar Currículo</button>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                     <div class="col-experiencias w-100">
                         <div class="flex mb-6 bg-gray-400 p-3 rounded align-middle">
                             <h2 class="text-xl">Detalhes e experiências profissionais</h2>
-                            <button class="ml-auto mt-2 btn btn-primary" onclick = "addExperiencia()" >Adicionar Experiência</button>
+                            <button class="ml-auto mt-2 btn btn-primary" type="button" onclick = "addExperiencia()" >Adicionar Experiência</button>
                         </div>
 
                         <div class="" id="experiencia">
