@@ -10,7 +10,7 @@ $curriculo->experiencias = $_POST['exp'];
 $nascimento = $_POST['nascimento'];
 $curriculo->idade = calcularIdade($nascimento);
 
-// foreach ($_POST['exp'] as $key => $experiencia) {
+// foreach ($_POST['exp'] as $key => mn) {
     
 //     var_dump('Experiência '.$key .' - '.$experiencia);
 
