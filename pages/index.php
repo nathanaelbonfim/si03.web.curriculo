@@ -1,6 +1,10 @@
 <?php
 date_default_timezone_set('america/sao_paulo');
 
+if (!isset($_POST['nome'])){
+    header('Location:../index.html');
+}
+
 $curriculo = new stdClass();
 
 $curriculo->nome = trim($_POST['nome']);
@@ -54,9 +58,12 @@ function renderizarExperiencia($experiencia) {
             </div>
             <div class="experiencias">
             <?php
+            if (isset($_POST['nome'])){
                 foreach ($curriculo->experiencias as $index => $experiencia) {
                     renderizarExperiencia($experiencia);
                 }
+
+            }
             ?>
             </div>
         </main>
