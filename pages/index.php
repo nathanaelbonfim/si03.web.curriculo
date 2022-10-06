@@ -4,19 +4,12 @@ date_default_timezone_set('america/sao_paulo');
 $curriculo = new stdClass();
 
 $curriculo->nome = trim($_POST['nome']);
+$curriculo->nascimento = $_POST['nascimento'];
 $curriculo->celular = trim($_POST['celular']);
 $curriculo->email = trim($_POST['email']);
 $curriculo->experiencias = $_POST['exp'];
-$nascimento = $_POST['nascimento'];
-$curriculo->idade = calcularIdade($nascimento);
+$curriculo->idade = calcularIdade($curriculo->nascimento);
 
-// foreach ($_POST['exp'] as $key => $experiencia) {
-    
-//     var_dump('Experiência '.$key .' - '.$experiencia);
-
-// }
-
-var_dump($curriculo);
 
 function calcularIdade($data){
     $idade = 0;
@@ -33,6 +26,39 @@ function calcularIdade($data){
     return $idade;
 }
 
-// echo("<script>window.print();</script>");
+
+function renderizarExperiencia($experiencia) {
+    ?>
+    <div>
+        <?php echo $experiencia; ?>
+    </div>
+    <?php
+}
 
 ?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/style/imprimir.css" rel="stylesheet">
+    </head>
+    <body>
+        <main class="container">
+            <div class="sobre">
+                <h1><?php echo $curriculo->nome; ?></h1>
+                <h1><?php echo $curriculo->celular; ?></h1>
+                <h1><?php echo $curriculo->email; ?></h1>
+            </div>
+            <div class="experiencias">
+            <?php
+                foreach ($curriculo->experiencias as $index => $experiencia) {
+                    renderizarExperiencia($experiencia);
+                }
+            ?>
+            </div>
+        </main>
+    </body>
+</html>
