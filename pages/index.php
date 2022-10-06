@@ -7,19 +7,14 @@ $curriculo->nome = trim($_POST['nome']);
 $curriculo->nascimento = $_POST['nascimento'];
 $curriculo->celular = trim($_POST['celular']);
 $curriculo->email = trim($_POST['email']);
-$curriculo->exp1 = $_POST['exp1'];
 $curriculo->idade = calcularIdade($curriculo->nascimento);
 
 
-var_dump($_POST['exp']);
-// foreach ($exp as $key => $value) {
+foreach ($_POST['exp'] as $key => $experiencia) {
     
-//     # code...
+    var_dump('Experiência '.$key .' - '.$experiencia);
 
-// }
-
-
-
+}
 
 var_dump($curriculo);
 
@@ -38,11 +33,6 @@ function calcularIdade($data){
     return $idade;
 }
 
-
-
-
-
-
-echo("<script>window.print();</script>");
+// echo("<script>window.print();</script>");
 
 ?>
