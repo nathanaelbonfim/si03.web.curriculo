@@ -52,6 +52,7 @@ function renderizarExperiencia($experiencia) {
     <body>
         <main class="container">
             <div class="sobre">
+                
                 <h1><?php echo $curriculo->nome; ?></h1>
                 <h1><?php echo $curriculo->celular; ?></h1>
                 <h1><?php echo $curriculo->email; ?></h1>
@@ -65,7 +66,22 @@ function renderizarExperiencia($experiencia) {
 
             }
             ?>
+            <div class="flex mb-6 bg-gray-400 p-3 rounded align-middle">
+                <button class="ml-auto mt-2 btn bg-indigo-600 hover:bg-indigo-800 text-white" type="button" id="imprimir" onclick = "imprimir()" >Imprimir currículo</button>
+            </div>
             </div>
         </main>
     </body>
 </html>
+
+<?php
+  echo"<script language='javascript'>
+
+    function imprimir(){
+        document.getElementById('imprimir').remove();
+        window.print();
+    }
+
+</script>
+";
+?>
