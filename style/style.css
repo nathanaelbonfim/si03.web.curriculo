@@ -1,33 +1,3 @@
-/* body{
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #C9C8CC !important;
 }
-
-.top{
-    border-bottom: 5px solid rgb(7, 7, 77);
-    text-align: center;
-    background-color: blue;
-    color: white;
-    padding: 10px;
-}
-
-.top h1{
-    margin: 0;
-    margin-top: 10px;
-}
-
-.private_information .name .age{
-    display: block;
-    float: right;
-}
-
-.photo_person img{
-    border: 1px solid red;
-    margin-top: 10px;
-    width: 200px;
-    height: 200px;
-    border-radius: 600px;
-} */
-/* body{
-    background-color: #E5E5E5 !important;
-} */
