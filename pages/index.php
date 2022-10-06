@@ -4,17 +4,17 @@ date_default_timezone_set('america/sao_paulo');
 $curriculo = new stdClass();
 
 $curriculo->nome = trim($_POST['nome']);
-$curriculo->nascimento = $_POST['nascimento'];
 $curriculo->celular = trim($_POST['celular']);
 $curriculo->email = trim($_POST['email']);
-$curriculo->idade = calcularIdade($curriculo->nascimento);
+$curriculo->experiencias = $_POST['exp'];
+$nascimento = $_POST['nascimento'];
+$curriculo->idade = calcularIdade($nascimento);
 
-
-foreach ($_POST['exp'] as $key => $experiencia) {
+// foreach ($_POST['exp'] as $key => $experiencia) {
     
-    var_dump('Experiência '.$key .' - '.$experiencia);
+//     var_dump('Experiência '.$key .' - '.$experiencia);
 
-}
+// }
 
 var_dump($curriculo);
 
