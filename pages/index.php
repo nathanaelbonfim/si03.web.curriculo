@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('america/sao_paulo');
 
-if (!isset($_POST['nome'])){
+if (count($_POST) == 0){
     header('Location:../index.html');
 }
 
