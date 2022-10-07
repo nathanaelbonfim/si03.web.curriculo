@@ -35,7 +35,7 @@ function calcularIdade($data){
 function renderizarExperiencia($experiencia) {
     ?>
     <div>
-        <?php echo $experiencia; ?>
+        <li><?php echo $experiencia; ?></li>
     </div>
     <?php
 }
